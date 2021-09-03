@@ -46,6 +46,9 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: metadata.uid
+        volumeMounts:
+        - mountPath: /tmp/
+          name: grpc-sock
       volumes:
       - name: tun-volume
         hostPath:
